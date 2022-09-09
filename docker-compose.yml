@@ -1,0 +1,32 @@
+version: "3.7"
+
+services:
+  db:
+    platform: linux/x86_64
+    image: mysql:8.0.28
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'db'
+      MYSQL_USER: 'user'
+      MYSQL_PASSWORD: 'password'
+      MYSQL_ROOT_PASSWORD: 'password'
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+    volumes:
+      - my-db:/var/lib/mysql
+  node:
+    build:
+      context: ./
+    container_name: "express-quick-site"
+    ports:
+      - 3000:8080
+    depends_on:
+      - "db"
+    volumes:
+      - ./:/var/www/front
+    # restart: always
+    command: [ "./start.sh" ]
+volumes:
+  my-db:

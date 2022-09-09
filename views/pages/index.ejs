@@ -1,0 +1,9 @@
+<% layout('../layout/default.ejs') -%>
+
+<h1><%= h1 %></h1>
+
+<ul>
+    <% list.forEach(function(user){ %>
+        <div><%= user.name %></div>
+    <% }); %>
+</ul>

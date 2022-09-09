@@ -1,5 +1,5 @@
 {
-  "name": "quiq-express-static-site",
+  "name": "quick-express-static-site",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -19,13 +19,14 @@
   },
   "homepage": "https://github.com/jonrezun/quiq-express-static-site#readme",
   "dependencies": {
+    "@babel/polyfill": "^7.12.1",
     "bcrypt": "^5.0.1",
     "body-parser": "^1.19.0",
     "dotenv": "^10.0.0",
-    "ejs-mate": "^3.0.0",
+    "ejs-mate": "^4.0.0",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
-    "@babel/polyfill": "^7.12.1",
+    "mysql2": "^2.3.3",
     "vue": "^2.6.14",
     "vue-loader": "^15.9.8",
     "vue-router": "^3.5.2",
@@ -39,7 +40,7 @@
     "clean-webpack-plugin": "^4.0.0-alpha.0",
     "css-loader": "^1.0.1",
     "mini-css-extract-plugin": "^2.2.0",
-    "node-sass": "^6.0.1",
+    "node-sass": "7.0.0",
     "nodemon": "^2.0.14",
     "postcss-loader": "^6.2.0",
     "postcss-preset-env": "^6.7.0",
@@ -47,5 +48,9 @@
     "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^5.49.0",
     "webpack-cli": "^4.9.1"
+  },
+  "engines": {
+    "node": "16.13.1",
+    "npm": "v8.1.2"
   }
 }
